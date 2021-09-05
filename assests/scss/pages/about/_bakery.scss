@@ -1,0 +1,41 @@
+.bakery-section{
+    background-color: $grayBackgroundColor;
+    padding: 60px 0 30px;
+    .container{
+        .bakery-intro{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+            .icon{
+                color: $brownColor;
+                font-size: 40px;
+                margin-bottom: 18px;
+            }
+            h2{
+                color: $blackColor;
+                font-size: 30px;
+                margin-bottom: 17px;
+            }
+            p{
+                color: #686868;
+                font-size: 17px;
+            }
+        }
+        .bakery-item{
+            margin-bottom: 60px;
+            h5{
+                font-size: 18px;
+                color: $blackColor;
+                margin-bottom: 18px;
+            }
+            p{
+                color: #686868;
+                line-height: 1.86;
+                font-size: 17px;
+            }
+        }
+    }
+}

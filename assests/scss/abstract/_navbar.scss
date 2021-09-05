@@ -1,0 +1,111 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000000;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            flex: 0 0 14%;
+        }
+        .menu-list{
+            ul{
+                display: flex;
+                align-items: center;
+                .list-item{
+                    height: 90px;
+                    display: flex;
+                    align-items: center;
+                    transition: height 0.25s ease-in-out;
+                    .list-link{
+                        padding: 0 15px;
+                        color: #fff;
+                        font-size: 18px;
+                        transition: all 0.25s ease-in-out;
+                    }
+                    &.active{
+                        .list-link{
+                            color: #e0dcd2;
+                        }
+                        border-top: 3px solid #ae9768;
+                    }
+                    &:hover{
+                        .list-link{
+                            color: #e0c690;
+                        }
+                        &.active{
+                            .list-link{
+                                color: #e0dcd2;
+                            }
+                        }
+                    }
+                    &.scroll{
+                        .list-link{
+                            color: #595959;
+                            opacity: 0.7;
+                        }
+                        &:hover{
+                            .list-link{
+                                color: #333;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    &.scroll.active{
+                        .list-link{
+                            color: #ae9768;
+                            opacity: 1;
+                        }
+                    }
+                    &.blog{
+                        .dropdown{
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            top: 100%;
+                            background-color: #433e37;
+                            width: 220px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.3s ease-in-out;
+                            .dropdown-item{
+                                margin: 5px 0;
+                                transition: all 0.25s ease-in-out;
+                                a{
+                                    padding: 10px 20px;
+                                    font-size: 15px;
+                                    color: #ccc;
+                                    transition: all 0.25s ease-in-out;
+                                }
+                                &:hover{
+                                    background-color: #ae9768;
+                                    a{
+                                        color: #fff;
+                                        padding-left: 18px;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        &:hover{
+                            .dropdown{
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    
+
+                }
+            }
+        }
+    }
+}

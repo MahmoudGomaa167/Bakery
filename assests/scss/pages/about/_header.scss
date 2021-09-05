@@ -1,0 +1,54 @@
+.about-page{
+    header{
+        height: 40vh;
+        background-position: bottom;
+        nav{
+            background-color: #fff;
+            .container{
+                .menu-list{
+                    ul{
+                        .list-item{
+                            .list-link{
+                                color: #595959;
+                                opacity: 0.7;;
+                            }
+                            &:hover{
+                                .list-link{
+                                    color: #333;
+                                    opacity: 1;
+                                }
+                            }
+                            &.active{
+                                .list-link{
+                                    color: #ae9768;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .about-intro{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            height: 100%;
+            width: 100%;
+            z-index: 11;
+            color: #fff;
+            h1{
+                font-size: 56px;
+                line-height: 1.86;
+                // margin-bottom: 14px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 1.86;
+                margin-bottom: 43px;
+            }
+        }
+    }
+}
