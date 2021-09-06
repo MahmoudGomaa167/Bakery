@@ -108,4 +108,110 @@ $(document).ready(() => {
 
         count();
     }
+
+    if($('.offer-page').length > 0){
+        $(window).scroll(function () {
+            let windowScrollTop = $(window).scrollTop();
+
+            if(windowScrollTop > 40) {
+                reduceHeight();
+            }else{
+                maxHeight();
+            }
+        });
+    }
+
+    if($('.gallery-page').length > 0){
+        $(window).scroll(function () {
+            let windowScrollTop = $(window).scrollTop();
+
+            if(windowScrollTop > 40) {
+                reduceHeight();
+            }else{
+                maxHeight();
+            }
+        });
+
+        // Modal
+
+        const modal = function(){
+            let nextBtn = document.querySelector('.arrow-right');
+            let prevBtn = document.querySelector('.arrow-left');
+            let closeBtn = document.querySelector('.close');
+            let imagesList = document.querySelectorAll('.gallery-image');
+            let imagesArr = Array.from(imagesList);
+            let images = document.querySelectorAll('.image');
+            let imagesSrcArr = [];
+            let index = 0;
+
+            images.forEach(image => {
+                let imageSrc = $(image).attr('src');
+                imagesSrcArr.push(imageSrc);
+            })
+
+            imagesArr.forEach(image => {
+                $(image).click(function(){
+                    let imageSrc = $(image).children('img').attr('src');
+
+                    $('.image-container').css('display', 'flex');
+                    $('body, html').css('overflow', 'hidden');
+                    $('.image-container .photo img').attr('src', imageSrc);   
+                }) 
+            })
+
+            function next() {
+                index++;
+                if(index > imagesSrcArr.length - 1){
+                    index = 0;
+                    $('.image-container .photo img').attr('src', imagesSrcArr[index]);
+                }else{
+                    $('.image-container .photo img').attr('src', imagesSrcArr[index]);
+                }
+            }
+
+            function prev() {
+                index--;
+                if(index < 0){
+                    index = imagesSrcArr.length - 1;
+                    $('.image-container .photo img').attr('src', imagesSrcArr[index]);
+                }else{
+                    $('.image-container .photo img').attr('src', imagesSrcArr[index]);
+                }
+            }
+
+            function close(){
+                $('.image-container').css('display', 'none');
+                $('body, html').css('overflow', 'auto');
+            }
+
+            
+
+            $(nextBtn).click(function (){
+                next();
+            });
+
+            $(prevBtn).click(function (){
+               prev();
+            });
+
+            $(closeBtn).click(function (){
+                close();
+            });
+
+            $(document).keydown(function(e) {
+                if(e.code === 'Escape'){
+                    close();
+                }
+                if(e.code === 'ArrowRight'){
+                    next();
+                }
+                if(e.code === 'ArrowLeft'){
+                    prev();
+                }
+            })
+            
+        }
+
+        modal();
+    }
 })

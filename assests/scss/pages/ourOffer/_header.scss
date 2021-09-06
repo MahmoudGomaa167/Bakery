@@ -1,7 +1,7 @@
-.about-page{
+.offer-page{
     header{
         height: 40vh;
-        background-position: bottom;
+        background-position: center;
         nav{
             background-color: #fff;
             .container{
@@ -10,7 +10,7 @@
                         .list-item{
                             .list-link{
                                 color: #595959;
-                                opacity: 0.7;;
+                                opacity: 0.7;
                             }
                             &:hover{
                                 .list-link{
@@ -29,25 +29,32 @@
                 }
             }
         }
-        .about-intro{
+        .offer-intro{
+            height: 100%;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: end;
-            height: 100%;
-            width: 100%;
-            z-index: 11;
             color: #fff;
+            z-index: 11;
             h1{
                 font-size: 56px;
                 line-height: 1.86;
             }
             p{
-                font-size: 18px;
+                font-size: 15px;
                 line-height: 1.86;
                 margin-bottom: 43px;
+                a{
+                    color: #fff;
+                    transition: all 0.25s ease-in-out;
+                    &:hover{
+                        color: $brownColor;
+                    }
+                }
             }
         }
+        
     }
 }

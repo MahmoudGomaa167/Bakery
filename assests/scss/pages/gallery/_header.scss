@@ -1,7 +1,8 @@
-.about-page{
+.gallery-page{
     header{
         height: 40vh;
-        background-position: bottom;
+        background-image: none;
+        background-color: $grayBackgroundColor;
         nav{
             background-color: #fff;
             .container{
@@ -29,7 +30,7 @@
                 }
             }
         }
-        .about-intro{
+        .gallery-intro{
             position: relative;
             display: flex;
             flex-direction: column;
@@ -38,15 +39,16 @@
             height: 100%;
             width: 100%;
             z-index: 11;
-            color: #fff;
             h1{
-                font-size: 56px;
+                font-size: 36px;
                 line-height: 1.86;
+                color: $blackColor;
             }
             p{
                 font-size: 18px;
                 line-height: 1.86;
                 margin-bottom: 43px;
+                color: #686868;
             }
         }
     }
