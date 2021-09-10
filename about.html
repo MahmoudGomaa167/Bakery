@@ -14,8 +14,58 @@
 <body>
 
     <div class="about-page">
+        <!---------------------------------------Loader-------------------------------------------------------->
+        <div class="loader">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                style="margin: auto; background: none; display: block; shape-rendering: auto;" width="200px"
+                height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#000000"
+                    stroke-dasharray="50.26548245743669 50.26548245743669" fill="none" stroke-linecap="round">
+                    <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite"
+                        keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform>
+                </circle>
+                <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#666666"
+                    stroke-dasharray="36.12831551628262 36.12831551628262" stroke-dashoffset="36.12831551628262"
+                    fill="none" stroke-linecap="round">
+                    <animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite"
+                        keyTimes="0;1" values="0 50 50;-360 50 50"></animateTransform>
+                </circle>
+            </svg>
+        </div>
+         <!---------------------------------------Loader-------------------------------------------------------->
+        <!---------------------------------------Color Box-------------------------------------------------------->
+        <div class="colorbox">
+            <h5>Choose Your Color</h5>
+            <div class="colors">
+                <span class="color" data-color="#218FE6"></span>
+                <span class="color" data-color="#F44336"></span>
+                <span class="color" data-color="#E91E63"></span>
+                <span class="color" data-color="#9C27B0"></span>
+                <span class="color" data-color="#673AB7"></span>
+                <span class="color" data-color="#3F51B5"></span>
+                <span class="color" data-color="#2196F3"></span>
+                <span class="color" data-color="#03A9F4"></span>
+                <span class="color" data-color="#00BCD4"></span>
+                <span class="color" data-color="#009688"></span>
+                <span class="color" data-color="#4CAF50"></span>
+                <span class="color" data-color="#8BC34A"></span>
+                <span class="color" data-color="#CDDC39"></span>
+                <span class="color" data-color="#FFC107"></span>
+                <span class="color" data-color="#FF9800"></span>
+                <span class="color" data-color="#FF5722"></span>
+                <span class="color" data-color="#795548"></span>
+                <span class="color" data-color="#607D8B"></span>
+                <span class="color" data-color="#8E7754"></span>
+            </div>
+            <span class="icon-cogs"></span>
+        </div>
+        <!---------------------------------------Color Box-------------------------------------------------------->
+
+        <!---------------------------------------Go Up Button-------------------------------------------------------->
+        <a href="#home" class="goup"><span class="icon-angle-up"></span></a>
+        <!---------------------------------------Go Up Button-------------------------------------------------------->
         <!---------------------------------------Header Section-------------------------------------------------------->
-        <header>
+        <header id="home">
             <!---------------------------------------Ovrlay-------------------------------------------------------->
             <div class="overlay"></div>
             <!---------------------------------------Navbar-------------------------------------------------------->
@@ -25,23 +75,19 @@
                         <a href="#"><img src="assests/images/asset 0.png"></a>
                     </div>
         
-                    <div class="menu-list">
-                        <ul>
-                            <li class="list-item"><a href="index.html" class="text-capitalize list-link">home</a></li>
-                            <li class="list-item active"><a href="about.html" class="text-capitalize list-link">about</a></li>
-                            <li class="list-item"><a href="our offer.html" class="text-capitalize list-link">our offer</a></li>
-                            <li class="list-item"><a href="gallery.html" class="text-capitalize list-link">gallery</a></li>
-                            <li class="list-item blog">
-                                <a href="blog.html" class="text-capitalize list-link">blog</a>
-                                <ul class="dropdown">
-                                    <li class="dropdown-item"><a href="blog index.html" class="text-capitalize">blog index</a></li>
-                                    <li class="dropdown-item"><a href="simple post.html" class="text-capitalize">simple post</a></li>
-                                    <li class="dropdown-item"><a href="gallery post.html" class="text-capitalize">gallery post</a></li>
-                                    <li class="dropdown-item"><a href="basic post.html" class="text-capitalize">basic post</a></li>
-                                </ul>
-                            </li>
-                            <li class="list-item"><a href="contact.html" class="text-capitalize list-link">contact</a></li>
+                    <div class="main-menu">
+                        <ul class="menu-list mobile-menu">
+                            <li class="list-item"><a href="index.html" class="list-link text-capitalize">home</a></li>
+                            <li class="list-item active"><a href="about.html" class="list-link text-capitalize">about</a></li>
+                            <li class="list-item"><a href="our offer.html" class="list-link text-capitalize">our offer</a></li>
+                            <li class="list-item"><a href="gallery.html" class="list-link text-capitalize">gallery</a></li>
+                            <li class="list-item"><a href="#" class="list-link text-capitalize">blog</a></li>
+                            <li class="list-item"><a href="contact.html" class="list-link text-capitalize">contact</a></li>
                         </ul>
+ 
+                        <div class="nav-toggler">
+                            <span class="icon-bars"></span>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -85,42 +131,42 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="bakery-item">
                             <h5>Facilities</h5>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nisi at scelerisque pellentesque. Nunc feugiat felis vitae aliquet consequat. Aliquam ullamcorper.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="bakery-item">
                             <h5>Best Equipment</h5>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nisi at scelerisque pellentesque. Nunc feugiat felis vitae aliquet consequat. Aliquam ullamcorper.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="bakery-item">
                             <h5>Incredible Location</h5>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nisi at scelerisque pellentesque. Nunc feugiat felis vitae aliquet consequat. Aliquam ullamcorper.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="bakery-item">
                             <h5>Premium Support</h5>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nisi at scelerisque pellentesque. Nunc feugiat felis vitae aliquet consequat. Aliquam ullamcorper.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="bakery-item">
                             <h5>Incredible Team</h5>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nisi at scelerisque pellentesque. Nunc feugiat felis vitae aliquet consequat. Aliquam ullamcorper.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="bakery-item">
                             <h5>Incredible Location</h5>
                             <p>Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nisi at scelerisque pellentesque. Nunc feugiat felis vitae aliquet consequat. Aliquam ullamcorper.</p>
@@ -135,33 +181,33 @@
         <section class="counter-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="counter-item">
-                            <span class="icon icon-like"></span>
+                            <span class="counter-icon icon-like"></span>
                             <h2 class="counter" data-number="1430"></h2>
                             <p class="text-capitalize">page likes</p>
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="counter-item">
-                            <span class="icon icon-shop"></span>
+                            <span class="counter-icon icon-shop"></span>
                             <h2 class="counter" data-number="64"></h2>
                             <p class="text-capitalize">locations</p>
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="counter-item">
-                            <span class="icon icon-bulb"></span>
+                            <span class="counter-icon icon-bulb"></span>
                             <h2 class="counter" data-number="960"></h2>
                             <p class="text-capitalize">great ideas</p>
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="counter-item">
-                            <span class="icon icon-bubble"></span>
+                            <span class="counter-icon icon-bubble"></span>
                             <h2 class="counter" data-number="420"></h2>
                             <p class="text-capitalize">comments</p>
                         </div>
@@ -175,7 +221,7 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h6>About us</h6>
                             <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur. I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur.</p>
@@ -183,7 +229,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h6>Why we are special?</h6>
                             <ul>
@@ -196,7 +242,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h6>Opening Hours</h6>
                             <ul>
@@ -210,27 +256,27 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="footer-item contact-details">
                             <h6>Contact Details</h6>
                             <div class="details">
                                 <div class="details-brief">
-                                    <span class="icon icon-map-marker"></span>
+                                    <span class="footer-icon icon-map-marker"></span>
                                     <span class="info">Manchester Road 123-78B, Silictown 7854MD, Great Country</span>
                                 </div>
 
                                 <div class="details-brief">
-                                    <span class="icon icon-phone"></span>
+                                    <span class="footer-icon icon-phone"></span>
                                     <span class="info">+46 123 456 789</span>
                                 </div>
 
                                 <div class="details-brief">
-                                    <span class="icon icon-envelope"></span>
+                                    <span class="footer-icon icon-envelope"></span>
                                     <span class="info">hello@sitename.com</span>
                                 </div>
 
                                 <div class="details-brief">
-                                    <span class="icon icon-globe"></span>
+                                    <span class="footer-icon icon-globe"></span>
                                     <span class="info"><a href="#"> http://www.sitename.com</a></span>
                                 </div>
                             </div>

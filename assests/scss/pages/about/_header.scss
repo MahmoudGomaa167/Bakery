@@ -5,12 +5,12 @@
         nav{
             background-color: #fff;
             .container{
-                .menu-list{
-                    ul{
+                .main-menu{
+                    .menu-list{
                         .list-item{
                             .list-link{
                                 color: #595959;
-                                opacity: 0.7;;
+                                opacity: 0.7;
                             }
                             &:hover{
                                 .list-link{

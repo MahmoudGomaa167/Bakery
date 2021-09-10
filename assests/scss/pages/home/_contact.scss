@@ -28,7 +28,7 @@
                     padding: 15px 0;
                     display: flex;
                     align-items: center;
-                    .icon{
+                    .contact-icon{
                         background-color: $brownColor;
                         width: 36px;
                         height: 36px;
@@ -39,6 +39,7 @@
                         justify-content: center;
                         font-size: 18px;
                         margin-right: 16px;
+                        transition: all 0.25s ease-in-out;
                     }
                     .info{
                         color: $grayColor;
@@ -49,6 +50,32 @@
         }
         .contact-map{
             margin-left: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .contact-section{
+        .container{
+            .contact-description{
+                padding: 0;
+                margin-bottom: 60px;
+            }
+            .contact-map{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px){
+    .contact-section{
+        .container{
+            .contact-description{
+                h2{
+                    font-size: 24px;
+                }
+            }
         }
     }
 }

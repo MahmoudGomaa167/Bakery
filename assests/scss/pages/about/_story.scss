@@ -36,3 +36,27 @@
         }
     }
 }
+
+@media screen and (max-width: 768px){
+    .story-section{
+        .container{
+            .story-image{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 482px){
+    .story-section{
+        .container{
+            .story-image{
+                margin-right: 0;
+                margin-bottom: 60px;
+            }
+        }
+    }
+}

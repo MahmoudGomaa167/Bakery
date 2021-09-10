@@ -35,3 +35,13 @@
         }
     }
 }
+
+@media screen and (max-width: 768px){
+    .baking-section{
+        .container{
+            .baking-item{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

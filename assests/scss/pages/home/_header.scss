@@ -21,6 +21,7 @@ header{
         align-items: center;
         justify-content: center;
         margin: auto;
+        width: 700px;
         .intro-welcome{
             color: #fff;
             font-size: 22px;
@@ -35,10 +36,36 @@ header{
         .intro-description{
             color: rgba(255,255,255,0.92);
             font-size: 24px;
-            width: 45%;
             text-align: center;
             line-height: 1.86;
             margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    header{
+        background-size: cover;
+        height: 100vh;
+        .intro{
+            width: 470px;
+            .intro-header{
+                font-size: 34px;
+            }
+            .intro-description{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 426px){
+    header{
+        .intro{
+            width: 300px;
         }
     }
 }

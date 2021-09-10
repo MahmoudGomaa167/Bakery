@@ -33,12 +33,47 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        transition: all 0.25s ease-in-out;
                     }
                     .info{
                         color: $grayColor;
                         font-size: 17px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .about-section{
+        .container{
+            .about-description{
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+   .about-section{
+       .container{
+           .about-image{
+               margin-right: 0;
+               height: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+           }
+       }
+   }
+}
+
+@media screen and (max-width: 481px){
+    .about-section{
+        .container{
+            .about-image{
+                margin-bottom: 60px;
             }
         }
     }

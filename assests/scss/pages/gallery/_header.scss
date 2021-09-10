@@ -6,8 +6,8 @@
         nav{
             background-color: #fff;
             .container{
-                .menu-list{
-                    ul{
+                .main-menu{
+                    .menu-list{
                         .list-item{
                             .list-link{
                                 color: #595959;
@@ -49,7 +49,20 @@
                 line-height: 1.86;
                 margin-bottom: 43px;
                 color: #686868;
+                text-align: center;
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .gallery-page{
+        header{
+            .gallery-intro{
+                h1{
+                    font-size: 28px;
+                }
+            }
+        }   
     }
 }

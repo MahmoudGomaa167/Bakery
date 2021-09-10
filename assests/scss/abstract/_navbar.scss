@@ -1,49 +1,47 @@
 nav{
     position: fixed;
+    z-index: 10000000;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100000000;
-    height: 90px;
+    bottom: 0;
     display: flex;
     align-items: center;
+    height: 90px;
     transition: all 0.25s ease-in-out;
     .container{
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         .logo{
             flex: 0 0 14%;
         }
-        .menu-list{
-            ul{
+        .main-menu{
+            display: flex;
+            .menu-list{
                 display: flex;
                 align-items: center;
                 .list-item{
                     height: 90px;
                     display: flex;
                     align-items: center;
-                    transition: height 0.25s ease-in-out;
+                    position: relative;
+                    padding: 0 15px;
+                    transition: all 0.25s ease-in-out;
                     .list-link{
-                        padding: 0 15px;
                         color: #fff;
                         font-size: 18px;
                         transition: all 0.25s ease-in-out;
-                    }
-                    &.active{
-                        .list-link{
-                            color: #e0dcd2;
-                        }
-                        border-top: 3px solid #ae9768;
                     }
                     &:hover{
                         .list-link{
                             color: #e0c690;
                         }
-                        &.active{
-                            .list-link{
-                                color: #e0dcd2;
-                            }
+                    }
+                    &.active{
+                        border-top: 3px solid $brownColor;
+                        .list-link{
+                            color: $brownColor;
                         }
                     }
                     &.scroll{
@@ -57,54 +55,93 @@ nav{
                                 opacity: 1;
                             }
                         }
-                    }
-                    &.scroll.active{
-                        .list-link{
-                            color: #ae9768;
-                            opacity: 1;
-                        }
-                    }
-                    &.blog{
-                        .dropdown{
-                            position: absolute;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            top: 100%;
-                            background-color: #433e37;
-                            width: 220px;
-                            opacity: 0;
-                            visibility: hidden;
-                            transition: all 0.3s ease-in-out;
-                            .dropdown-item{
-                                margin: 5px 0;
-                                transition: all 0.25s ease-in-out;
-                                a{
-                                    padding: 10px 20px;
-                                    font-size: 15px;
-                                    color: #ccc;
-                                    transition: all 0.25s ease-in-out;
-                                }
-                                &:hover{
-                                    background-color: #ae9768;
-                                    a{
-                                        color: #fff;
-                                        padding-left: 18px;
-                                    }
-                                }
-                                
-                            }
-                        }
-                        &:hover{
-                            .dropdown{
+                        &.active{
+                            .list-link{
+                                color: $brownColor;
                                 opacity: 1;
-                                visibility: visible;
                             }
                         }
                     }
-                    
-
                 }
+            }
+            
+        }
+        .nav-toggler{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    nav{
+        .container{
+            .logo{
+                flex: 0 0 25%;
+            }
+            .main-menu{
+                .menu-list{
+                    flex-direction: column;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    align-items: flex-start;
+                    background-color: #fff;
+                    border-top: 1px solid #eee;
+                    border-bottom: 1px solid #eee;
+                    display: none;
+                    .list-item{
+                        width: 100%;
+                        height: 45px;
+                        .list-link{
+                            color: $blackColor;
+                            padding: 10px 0;
+                            border-bottom: 1px solid #f1f1f1;
+                            width: 100%;
+                        }
+                        &:last-of-type{
+                            .list-link{
+                                border-bottom: none;
+                            }
+                        }
+                        &.active{
+                            border-top: none;
+                            .list-link{
+                                color: $brownColor;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .nav-toggler{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 481px){
+    nav{
+        .container{
+            .logo{
+                flex: 0 0 35%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px){
+    nav{
+        .container{
+            .logo{
+                flex: 0 0 55%;
             }
         }
     }

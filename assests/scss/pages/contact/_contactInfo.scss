@@ -1,0 +1,113 @@
+.contact-form{
+    .container{
+        padding: 80px 0 45px;
+        .form{
+            margin-right: 25px;
+            h3{
+                color: $blackColor;
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                input,
+                textarea{
+                    padding: 12px;
+                    color: $grayColor;
+                    margin-bottom: 18px;
+                    border: 1px solid #e6e6e6;
+                    transition: all 0.25s ease-in-out;
+                    &:focus{
+                        border: 1px solid $brownColor;
+                        outline: none;
+                    }
+                }
+                .nameEmail{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    input{
+                        width: 50%;
+                        margin-right: 15px;
+                        &:last-of-type{
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .form-button{
+                    button{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $brownColor;
+                        border: none;
+                        color: #fff;
+                        padding: 11px 20px;
+                        font-size: 17px;
+                        font-weight: 700;
+                        border-radius: 4px;
+                        transition: all 0.25s ease-in-out;
+                        &:hover{
+                            background-color: #333;
+                        }
+                    }
+                }
+               
+            }
+        }
+        .contact-info{
+            padding: 0 15px 0 24px;
+            h3{
+                color: $blackColor;
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            p{
+                color: $grayColor;
+                font-size: 17px;
+                line-height: 1.86;
+            }
+            .contact-icons{
+                .icons-item{
+                    display: flex;
+                    align-items: center;
+                    padding: 15px 0;
+                    .icon{
+                        width: 36px;
+                        height: 36px;
+                        background-color: $brownColor;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        font-size: 18px;
+                        transition: all 0.25s ease-in-out;
+                    }
+                    .info{
+                        color: $grayColor;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+    .contact-form{
+        .container{
+            .form{
+                margin-right: 0;
+                margin-bottom: 60px;
+            }
+            .contact-info{
+                padding: 0;
+            }
+        }
+    }
+}

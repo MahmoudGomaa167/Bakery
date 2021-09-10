@@ -3,13 +3,14 @@
     color: #fff;
     padding: 85px 0 50px;
     text-align: center;
+    transition: all 0.25s ease-in-out;
     .container{
         .counter-item{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            .icon{
+            .counter-icon{
                 font-size: 34px;
                 margin-bottom: 26px;
             }
@@ -20,6 +21,16 @@
             p{
                 font-size: 20px;
                 color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .counter-section{
+        .container{
+            .counter-item{
+                margin-bottom: 30px;
             }
         }
     }

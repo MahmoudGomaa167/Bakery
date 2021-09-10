@@ -24,3 +24,37 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px){
+    .location-section{
+        .container{
+            .location-description{
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .location-section{
+        .container{
+            .location-image{
+                margin-left: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 481px){
+    .location-section{
+        .container{
+            .location-description{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

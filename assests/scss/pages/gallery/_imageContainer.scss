@@ -27,3 +27,24 @@
         }
     }
 }
+
+@media screen and (max-width: 376px){
+    .gallery-page{
+        .image-container{
+            button{
+                &.arrow-left{
+                    position: absolute;
+                    left: 30px;
+                    top: 50%;
+                    color: $brownColor;
+                }
+                &.arrow-right{
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    color: $brownColor;
+                }
+            }
+        }
+    }
+}

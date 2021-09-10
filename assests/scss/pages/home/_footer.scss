@@ -1,8 +1,10 @@
 footer{
     background-color: $footerBackgroundColor;
+
     .container{
+        padding-top: 60px;
+        padding-bottom: 52px;
         .footer-item{
-            padding: 60px 0 52px;
             h6{
                 color: #fff;
                 font-size: 18px;
@@ -38,7 +40,7 @@ footer{
                     margin-bottom: 12px;
                     border-bottom: 1px solid rgba(255,255,255,0.05);
                     line-height: 1.86;
-                    .icon{
+                    .footer-icon{
                         margin-right: 10px;
                         font-size: 18px;
                         line-height: 1.4;
@@ -130,6 +132,17 @@ footer{
             font-size: 20px;
             span{
                 color: #fff;
+                transition: all 0.25s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    footer{
+        .container{
+            .footer-item{
+                margin-bottom: 30px;
             }
         }
     }
